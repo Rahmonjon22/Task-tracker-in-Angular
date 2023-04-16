@@ -11,11 +11,22 @@ import { TaskService } from 'src/app/services/task.service';
 export class TasksComponent {
   // tasks: Task[] = TASKS;
   tasks: Task[] = [];
-
-  constructor(private taskService: TaskService ){}
+  constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
-    this.tasks = this.taskService.getTasks();
+        // this.tasks = this.taskService.getTasks();
+    this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
+  }
 
+
+  // deleteTask(task: Task){
+  //   this.taskService.deleteTask(task).subscribe(() =>(this.tasks = this.tasks.filter(t => t.id ! ===task.id)));
+  // }
+  deleteTask(task: Task) {
+    this.taskService
+      .deleteTask(task)
+      .subscribe(
+        () => (this.tasks = this.tasks.filter((t) => t.id !== task.id))
+      );
   }
 }
