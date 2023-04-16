@@ -1,4 +1,4 @@
-# AngularTypeScript
+# Task Tracker in Angular& TypeScript
 ## create angular project
 ng new theNameOfProject
 
@@ -18,3 +18,6 @@ ng generate service services/task  for task
  wrote     "server": "json-server --watch db.json --port 5000" in package json
  npm run server
  http://localhost:5000/tasks for backend
+
+ ## service
+ ng generate service services/ui

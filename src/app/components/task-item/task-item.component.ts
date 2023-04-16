@@ -21,7 +21,7 @@ export class TaskItemComponent implements OnInit {
     this.onDeleteTask.emit(task);
   }
 
-  // onToggle(task) {
-  //   this.onToggleReminder.emit(task);
-  // }
+  onToggle(task: Task) {
+    this.onToggleReminder.emit(task);
+  }
 }
