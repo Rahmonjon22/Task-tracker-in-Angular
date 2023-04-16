@@ -8,3 +8,8 @@ ng serve --open
 
 ## create component inside components example bellow
 ng generate component components/header
+## font awesome
+ng add @fortawesome/angular-fontawesome@
+
+## services
+ng generate service services/task  for task 
