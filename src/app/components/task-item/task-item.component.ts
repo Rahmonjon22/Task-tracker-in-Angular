@@ -13,7 +13,9 @@ export class TaskItemComponent implements OnInit {
   @Output() onToggleReminder: EventEmitter<Task> = new EventEmitter();
   faTimes = faTimes;
 
-  constructor() {}
+  constructor() {
+   
+  }
 
   ngOnInit(): void {}
 
